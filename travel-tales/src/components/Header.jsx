@@ -1,24 +1,38 @@
 import React from "react";
-import "../styles/header.css";
-
-function Header() {
-    return (
-     
-      <header class="site-header">
-      <div class="site-identity">
-        <h1><a href="#">Travel Tales</a></h1>
-      </div>  
-      <nav class="site-navigation">
-        <ul class="nav">
-          <li><a href="#">Home</a></li> 
-          <li><a href="#">login</a></li> 
-          <li><a href="#">Register</a></li> 
-        </ul>
-      </nav>
-    </header>
-    );
-}
+import travel from '../assets/images/traveltales.png';
 
 
+
+const Header = () => {
+  return (
+    <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                   <div href="index.html" class="logo">
+                     Travel Tales</div>
+                    
+                    <ul class="nav">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">Login</a></li>
+                        <li><a href="deals.html">Register</a></li>
+                        <li><a href="reservation.html">About</a></li>
+                       
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                   
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  );
+};
 
 export default Header;
+
+
+
