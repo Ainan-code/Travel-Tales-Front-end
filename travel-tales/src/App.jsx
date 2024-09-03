@@ -1,24 +1,21 @@
+import { Container } from "./components/styles/Container.styled";
+import Header from "./components/Header";
 
 
-import './App.css';
-import './assets/css/fontawesome.css';
-import './assets/css/owl.css';
-import './assets/css/b.css';
-import './assets/css/templatemo-woox-travel.css';
-
-
-
-import './components/Header';
-import Header from './components/Header';
-import Homepage from './pages/homepage';
 function App() {
  
 
   return (
     <>
-     <Homepage/> 
+
+    <Header/>
+    
+    <Container>
+      <h1>Travel tales</h1>
+    </Container> 
+    
     </>
-  )
+    )
 }
 
 export default App
