@@ -1,15 +1,24 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import { Styledheader,  } from "./styles/Header.styled";
+import login from "../pages/login";
+import register from "../pages/register";
 
 
 
 
 const Header = () => {
   return (
-   <header>
+  <Styledheader>
     <h1>Travel Tales</h1>
-   </header>
+    <nav>
+      <ul>
+        <Link>{login}</Link>
+        <Link>{register}</Link>
+      </ul>
+    </nav>
+  </Styledheader>
   );
 };
 
