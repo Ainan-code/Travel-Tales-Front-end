@@ -1,4 +1,4 @@
-import { Container } from "./components/styles/Container.styled";
+import './App.css'
 import Header from "./components/Header";
 
 
@@ -7,12 +7,8 @@ function App() {
 
   return (
     <>
-
-    <Header/>
-    
-    <Container>
-      <h1>Travel tales</h1>
-    </Container> 
+          <Header></Header>
+      
     
     </>
     )

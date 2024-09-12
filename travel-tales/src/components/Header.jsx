@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import { Styledheader,  } from "./styles/Header.styled";
+
 import login from "../pages/login";
 import register from "../pages/register";
 
@@ -10,15 +10,13 @@ import register from "../pages/register";
 
 const Header = () => {
   return (
-  <Styledheader>
-    <h1>Travel Tales</h1>
-    <nav>
+    <header>
+      <h1>Travel Tales</h1>
       <ul>
-        <Link>{login}</Link>
-        <Link>{register}</Link>
+        <li>Login</li>
+        <li>Sign up</li>
       </ul>
-    </nav>
-  </Styledheader>
+    </header>
   );
 };
 
