@@ -4,19 +4,23 @@ import { Link } from "react-router-dom";
 
 import login from "../pages/login";
 import register from "../pages/register";
+import './styles/Header.css';
 
 
 
 
 const Header = () => {
   return (
-    <header>
-      <h1>Travel Tales</h1>
-      <ul>
-        <li>Login</li>
-        <li>Sign up</li>
-      </ul>
-    </header>
+    <header className="header">
+    <h1>Travel Tales</h1>
+    <nav>
+        <ul className="header-links">
+            <li><a href="/">Login</a></li>
+            <li><a href="/about">Sign up</a></li>
+           
+        </ul>
+    </nav>
+</header>
   );
 };
 

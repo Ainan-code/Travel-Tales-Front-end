@@ -1,0 +1,38 @@
+.header {
+    background-color: #6688B7;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-size: 24px;
+    color: black;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .header nav {
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+  }
+
+  .header-links {
+    list-style-type: none;
+    padding: 5px;
+  }
+
+  .header-links li {
+    display: inline;
+  }
+
+  .header-links li a {
+    color: #000;
+    background-color: #829EC4;
+    padding: 0.25em 0.5em;
+    margin: 4px;
+    text-decoration: none;
+  }
