@@ -1,5 +1,25 @@
 .welcome-banner{
-    background-image: url('/home/ainan/Travel-Tales-Front-end/travel-tales/src/assets/oxana-v-qoAIlAmLJBU-unsplash.jpg');
-    width: 500px;
-    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 0 60px;
+    border-bottom: 1px solid #d4d4d8;
+    width: 100%;
 }
+
+.welcome-leftimage, .welcome-leftimage {
+    max-width: 300px;
+    padding: 20px;
+}
+
+.welcome-image {
+    height: 70%;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.welcome-right-container h2 {
+    font-size: 24px;
+}
+

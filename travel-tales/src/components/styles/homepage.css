@@ -1,0 +1,21 @@
+
+.blogsection-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    padding: 10px;
+    color: #90A9CB;
+    
+    margin: 25px 0 5px;
+}
+    
+
+footer {
+    font-size: 15px;
+    padding: 50px 0 10px;
+    display: flex;
+    justify-content: center;
+    width: 97%;
+    margin-top: auto;
+}
