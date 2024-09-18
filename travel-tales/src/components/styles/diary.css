@@ -17,3 +17,22 @@
     height: 300px;
     border: 10px;
 }
+
+.diary-content h5 {
+  
+    font-size:17px; 
+    font-weight:400;  
+    letter-spacing:1px; 
+    text-transform:uppercase; 
+    width:160px; 
+    text-align:center; 
+    margin:auto; 
+    white-space:nowrap; 
+    padding-bottom:10px;
+
+}
+
+.diary-content p {
+    font-size: 15px;
+    
+}
