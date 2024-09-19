@@ -5,6 +5,7 @@ import App from './App.jsx';
 import Register from './pages/register.jsx';
 import Login from './pages/login.jsx';
 import Homepage from './pages/homepage.jsx';
+import UserProfile from './pages/UserProfile.jsx';
 
 
 const Router = () => {
@@ -32,6 +33,13 @@ const Router = () => {
               element: <Login/>,
     
               },
+
+              {
+                path: "/profile",
+                element: <UserProfile/>
+      
+                },
+               
              
 
         

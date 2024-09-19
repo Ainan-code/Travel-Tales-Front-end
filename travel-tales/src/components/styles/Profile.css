@@ -1,0 +1,27 @@
+.user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    gap: 40px;
+    margin: 20px;
+}
+
+.profile-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid blue;
+    background-color: antiquewhite;
+    height: 350px;
+    width: 100%;
+    
+}
+
+
+.profile-image img {
+    width: 350px;
+    height: 300px;
+    border: 10px;
+}
