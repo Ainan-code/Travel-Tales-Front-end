@@ -6,6 +6,7 @@ import Register from './pages/register.jsx';
 import Login from './pages/login.jsx';
 import Homepage from './pages/homepage.jsx';
 import UserProfile from './pages/UserProfile.jsx';
+import DiaryEntry from './pages/DiaryEntry.jsx';
 
 
 const Router = () => {
@@ -39,6 +40,14 @@ const Router = () => {
                 element: <UserProfile/>
       
                 },
+
+                {
+                  path: "/creatediary",
+                  element: <DiaryEntry/>
+        
+                  },
+
+
                
              
 

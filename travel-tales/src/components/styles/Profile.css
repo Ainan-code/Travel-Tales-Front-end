@@ -1,6 +1,6 @@
 
 .user-profile {
-    background: whitesmoke;
+    background: #2B5878;
     height: 100vh;
     display: grid;
     place-items: center;
@@ -12,36 +12,28 @@
    
     padding: 15px;
     width: 350px;
-    background: #222;
+    background: #DFEEF6;
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
     user-select: none;
+    
 }
 
 .cover-photo {
     position: relative;
-    background: url(https://i.imgur.com/jxyuizJ.jpeg);
+  ;
     background-size: cover;
     height: 180px;
     border-radius: 5px 5px 0 0;
 }
 
-.profile {
-    position: absolute;
-    width: 120px;
-    bottom: -60px;
-    left: 15px;
-    border-radius: 50%;
-    border: 2px solid #222;
-    background: #222;
-    padding: 5px;
-}
+
 
 .profile-name {
     font-size: 20px;
     margin: 25px 0 0 120px;
-    color: #fff;
+    color: white;
 }
 
 .about {
@@ -73,21 +65,12 @@
     color: #222;
 }
 
-.icons {
-    width: 180px;
-    margin: 0 auto 10px;
+.user-post h4 {
+    font-size: 24px;
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    color: #222;
 }
 
-.icons i {
-    cursor: pointer;
-    padding: 5px;
-    font-size: 18px;
-    transition: 0.2s;
-}
 
-.icons i:hover {
-    color: #7ce3ff;
-}

@@ -5,13 +5,11 @@ function UserProfile() {
     return(
     <div className="user-profile">
         <div className="card">
-        <div className="cover-photo">
-            <img src="https://i.imgur.com/KykRUCV.jpeg" className="profile"/>
+        <div >
+            <img src={profileimg} className="cover-photo"/>
         </div>
         <h3 className="profile-name">James Carson</h3>
-        <p className="about">UI/UX Designer  Front End Developer</p>
-        <button className="btn">Message</button>
-        <button className="btn">Following</button>
+       
     
         </div>
         <div className="user-post">
