@@ -22,12 +22,14 @@ function Register() {
         e.preventDefault();
       
         try {
-          const response = await axios.post('http://localhost:5000/users/register', {userRegister});
+          const response = await axios.post('http://localhost:5000/users/register', userRegister);
           console.log('Form data submitted successfully:', response.data);
           // You can add additional logic here, such as displaying a success message
+          alert("succesfuly registered");
         } catch (error) {
           console.error('Error submitting form data:', error);
           // You can add error handling logic here, such as displaying an error message
+          alert("with registering user");
         }
       };
 
@@ -39,12 +41,12 @@ function Register() {
         <h4>Sign up</h4>
         <form action="#" className="register-form" onSubmit={handleSubmit}>
             <label htmlFor="username">Username:</label>
-            <input type="text" name='username' required onChange={handleInput}/>
+            <input type="text" name='username' value={userRegister.username} required onChange={handleInput}/>
             <label htmlFor="password">Password:</label>
-            <input type="password" name='password' required onChange={handleInput}/>
+            <input type="password" name='password' value={userRegister.password} required onChange={handleInput}/>
             <label htmlFor="confirm-password">Confirm password:</label>
             <input type="password" name='confirm-password'required/>
-            <button type="submit">Sign up</button>
+            <button type="submit" >Sign up</button>
         </form>
 
          <p>Already have an account! <a href="/login">Login here</a></p>
