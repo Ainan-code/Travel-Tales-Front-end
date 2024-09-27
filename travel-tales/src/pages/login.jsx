@@ -1,16 +1,18 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 function login() {
+
+  const navigate = useNavigate();
     const [loginpayload, setloginpayload] = useState({
         username: '',
         password: '',
       });
 
-    const [userdata, setUserData] = useState({});
 
       const handleInput = (e) => {
         const { name, value } = e.target;
@@ -27,9 +29,12 @@ function login() {
           const response = await axios.post('http://localhost:5000/users/login', loginpayload);
           console.log('Form data submitted successfully:', response.data);
           // You can add additional logic here, such as displaying a success message
-          alert("succesfuly logged in");
-          setUserData
-          window.location.href = '/profile';
+         
+          let access = response.data.token;
+          let userId = response.data._id;
+          localStorage.setItem("SavedToken", access);
+          localStorage.setItem("userId",  userId)
+          navigate('/profile');
         } catch (error) {
           console.error('Error submitting form data:', error);
           // You can add error handling logic here, such as displaying an error message
