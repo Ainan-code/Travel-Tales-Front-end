@@ -32,7 +32,7 @@ function login() {
          
           let access = response.data.token;
           let userId = response.data._id;
-          localStorage.setItem("SavedToken", access);
+          localStorage.setItem("token", access);
           localStorage.setItem("userId",  userId)
           navigate('/profile');
         } catch (error) {

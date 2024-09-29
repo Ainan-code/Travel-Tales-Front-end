@@ -1,38 +1,56 @@
-import profileimg from "/home/ainan/Travel-Tales-Front-end/travel-tales/src/assets/blink-p0kzFn1BGOk-unsplash.jpg"
-import Diary from "../components/diary";
+
+
 import "../components/styles/Profile.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 
 
 function UserProfile() {
     const [username, setUsername] = useState('');
+  
      
 
    
-const token = localStorage.getItem('SavedToken');
+ 
+ const token = localStorage.getItem('token');
 
-axios.get('http://localhost:5000/users/:id',{
-    headers: { Authorization: `Bearer ${token}` }
+ useEffect(() => {
+  fetch(`http://localhost:5000/users/profile`, { 
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`, 
+      "Content-Type": "application/json"
+    },
+    mode: "cors"
   })
-  .then(res => console.log(res.data))
-  .catch(err => console.error(err));
-    
-     
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then(data => {
+    setUsername(data.user.username);
+   
+  })
+  .catch(error => {
+   console.log(error)
+  });
+}, []);
 
     return(
     <div className="user-profile">
         <div className="card">
-        <div >
-            <img src={profileimg} className="cover-photo"/>
-        </div>
-        <h3 className="profile-name">{username}</h3>
+       
+        <h3 className="profile-name">Name:{username}</h3>
        
     
         </div>
         <div className="user-post">
-            <h4>Your post</h4>
-          <Diary/>
+            <h4>Create a Post</h4>
+         <Link to="/creatediary">Make an Entry</Link>
         </div>
    </div>
        

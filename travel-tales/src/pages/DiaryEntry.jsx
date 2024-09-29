@@ -1,18 +1,52 @@
- 
-
+ import axios from "axios";
+ import { useNavigate } from "react-router-dom";
  function DiaryEntry () {
+    const navigate = useNavigate();
+    const [blog, setBlog] = useState({
+        title: '',
+        content: '',
+        location: '',
+      });
+
+
+      const handleInput = (e) => {
+        const { name, value } = e.target;
+        setBlog({
+          ...blog,
+          [name]: value,
+        });
+      };
+
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+      
+        try {
+          const response = await axios.post('http://localhost:5000/diaries/diary', blog, headers: {
+            "Authorization": `Bearer ${token}`, 
+            "Content-Type": "application/json"
+          });
+          console.log('Tale data submitted successfully:', response.data);
+          // You can add additional logic here, such as displaying a success message
+         
+          
+          navigate('/');
+        } catch (error) {
+          console.error('Error submitting form data:', error);
+          // You can add error handling logic here, such as displaying an error message
+          alert("failed to publish Tale");
+        }
+      };
     return(
         <div className="register-container">
         <h4>Create a Tale</h4>
-        <form action="#" className="register-form">
+        <form action="#" className="register-form" onSubmit={handleSubmit}>
             <label htmlFor="title">Title:</label>
-            <input type="text" name='title'/>
+            <input type="text" name='title' onChange={handleInput} value={blog.title}/>
             <label htmlFor="content">Content:</label>
-            <input type="text" name='content'/>
-            <label htmlFor="img">Upload Image:</label>
-            <input type="file" name='img'/>
+            <input type="text" name='content'onChange={handleInput} value={blog.content}/>
+          
             <label htmlFor="location">Location:</label>
-            <input type="text" name='location'/>
+            <input type="text" name='location'onChange={handleInput} value={blog.location}/>
             <button type="submit">Publish</button>
         </form>
 
