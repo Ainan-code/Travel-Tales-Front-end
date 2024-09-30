@@ -1,5 +1,6 @@
  import axios from "axios";
  import { useNavigate } from "react-router-dom";
+ import { useState } from "react";
  function DiaryEntry () {
     const navigate = useNavigate();
     const [blog, setBlog] = useState({
@@ -8,7 +9,7 @@
         location: '',
       });
 
-
+      const token = localStorage.getItem('token');
       const handleInput = (e) => {
         const { name, value } = e.target;
         setBlog({
@@ -21,10 +22,10 @@
         e.preventDefault();
       
         try {
-          const response = await axios.post('http://localhost:5000/diaries/diary', blog, headers: {
+          const response = await axios.post('http://localhost:5000/diaries/diary', blog, {headers: {
             "Authorization": `Bearer ${token}`, 
             "Content-Type": "application/json"
-          });
+          }});
           console.log('Tale data submitted successfully:', response.data);
           // You can add additional logic here, such as displaying a success message
          
@@ -33,7 +34,7 @@
         } catch (error) {
           console.error('Error submitting form data:', error);
           // You can add error handling logic here, such as displaying an error message
-          alert("failed to publish Tale");
+         
         }
       };
     return(
