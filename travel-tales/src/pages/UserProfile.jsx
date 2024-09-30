@@ -44,7 +44,7 @@ function UserProfile() {
     <div className="user-profile">
         <div className="card">
        
-        <h3 className="profile-name">Name:{username}</h3>
+        <h3 className="profile-name">Welcome {username}</h3>
        
     
         </div>

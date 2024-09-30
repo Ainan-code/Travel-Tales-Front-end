@@ -31,7 +31,7 @@ function Homepage() {
             { 
            diaries &&  diaries.map((item) => {
              // Add a return
-            return <Diary title = {item.title} content = {item.content} />
+            return <Diary title = {item.title} content = {item.content} user = {item.user}/>
   })
 }
             

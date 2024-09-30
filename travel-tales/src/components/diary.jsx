@@ -10,7 +10,7 @@ function Diary(props) {
             <div className="diary-content">
                 <h5>{props.title}</h5>
                 <p>{props.content}</p>
-                <p>Africa</p>
+                <p>by {props.user}</p>
             </div>
         </div>
     )
