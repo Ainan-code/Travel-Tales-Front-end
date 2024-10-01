@@ -1,6 +1,7 @@
  import axios from "axios";
  import { useNavigate } from "react-router-dom";
  import { useState } from "react";
+ import MainLayout from "../components/MainLayout";
  function DiaryEntry () {
     const navigate = useNavigate();
     const [blog, setBlog] = useState({
@@ -38,6 +39,7 @@
         }
       };
     return(
+      <MainLayout>
         <div className="register-container">
         <h4>Create a Tale</h4>
         <form action="#" className="register-form" onSubmit={handleSubmit}>
@@ -53,6 +55,7 @@
 
         
        </div>
+       </MainLayout>
     )
  }
 

@@ -4,6 +4,7 @@ import "../components/styles/Profile.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import MainLayout from "../components/MainLayout";
 
 
 
@@ -41,6 +42,7 @@ function UserProfile() {
 }, []);
 
     return(
+      <MainLayout>
     <div className="user-profile">
         <div className="card">
        
@@ -53,6 +55,7 @@ function UserProfile() {
          <Link to="/creatediary">Make an Entry</Link>
         </div>
    </div>
+   </MainLayout>
        
     )
 }

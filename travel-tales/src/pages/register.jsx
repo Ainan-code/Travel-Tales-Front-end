@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import '../components/styles/register.css';
 import { useState } from 'react';
 import axios from 'axios';
+import MainLayout from '../components/MainLayout';
 
 
 function Register() {
@@ -36,7 +37,7 @@ function Register() {
 
     return(
 
-       
+       <MainLayout>
        <div className="register-container">
         <h4>Sign up</h4>
         <form action="#" className="register-form" onSubmit={handleSubmit}>
@@ -51,6 +52,7 @@ function Register() {
 
          <p>Already have an account! <a href="/login">Login here</a></p>
        </div>
+       </MainLayout>
     )
 }
 

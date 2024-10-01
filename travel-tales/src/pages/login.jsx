@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import MainLayout from "../components/MainLayout";
 
 
 
@@ -42,6 +43,7 @@ function login() {
         }
       };
     return(
+      <MainLayout>
         <div className="register-container">
         <h4>Login</h4>
         <form action="#" className="register-form" onSubmit={handleSubmit}>
@@ -55,6 +57,7 @@ function login() {
 
         <p>Dont have an account! <a href="/register">Register here</a></p>
        </div>
+       </MainLayout>
     )
 }
 

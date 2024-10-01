@@ -5,7 +5,8 @@ import Banner from '../components/welcomeBanner';
 import '../components/styles/homepage.css';
 import Diary from "../components/diary";
 import Footer from "../components/footer";
-import { useEffect } from "react";
+import { useEffect } from "react"; 
+
 
 
 
