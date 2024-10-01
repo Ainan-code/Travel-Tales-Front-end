@@ -1,12 +1,18 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import MainLayout from "../components/MainLayout";
+import AuthContext from "../AuthContext";
+
 
 
 
 
 function login() {
+
+  const UseAuth = () => {
+    return useContext(AuthContext);
+  };
 
   const navigate = useNavigate();
     const [loginpayload, setloginpayload] = useState({
@@ -14,7 +20,7 @@ function login() {
         password: '',
       });
 
-
+      const auth = UseAuth();
       const handleInput = (e) => {
         const { name, value } = e.target;
         setloginpayload({
@@ -27,15 +33,10 @@ function login() {
         e.preventDefault();
       
         try {
-          const response = await axios.post('http://localhost:5000/users/login', loginpayload);
-          console.log('Form data submitted successfully:', response.data);
-          // You can add additional logic here, such as displaying a success message
+        
          
-          let access = response.data.token;
-          let userId = response.data._id;
-          localStorage.setItem("token", access);
-          localStorage.setItem("userId",  userId)
-          navigate('/profile');
+          auth.loginAction(loginpayload)
+       
         } catch (error) {
           console.error('Error submitting form data:', error);
           // You can add error handling logic here, such as displaying an error message
