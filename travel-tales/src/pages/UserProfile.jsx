@@ -5,11 +5,17 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "../components/MainLayout";
+import AuthContext from "../AuthContext";
+import { useContext } from "react";
 
 
 
 function UserProfile() {
     const [username, setUsername] = useState('');
+    const UseAuth = () => {
+      return useContext(AuthContext);
+    };
+    const auth = UseAuth();
   
      
 
@@ -54,6 +60,7 @@ function UserProfile() {
             <h4>Create a Post</h4>
          <Link to="/creatediary">Make an Entry</Link>
         </div>
+        <button onClick={auth.logOut}>Logout</button>
    </div>
    </MainLayout>
        

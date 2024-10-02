@@ -29,10 +29,14 @@
     display: inline;
   }
 
-  .header-links li a {
+  .header-links li a, button {
     color: #000;
     background-color: #829EC4;
     padding: 0.25em 0.5em;
     margin: 4px;
     text-decoration: none;
+    
   }
+
+  
+

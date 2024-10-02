@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem("token") || "");
+  const [token, setToken] = useState(localStorage.getItem("token"));
   const navigate = useNavigate();
+  const [isAuthenticated, setIsAuthenticated]= useState(false);
 
   const loginAction = async (loginpayload) => {
     try {
@@ -17,6 +18,7 @@ const AuthProvider = ({ children }) => {
         setUser(response.data.id);
         setToken(response.data.token);
         localStorage.setItem("token", response.data.token);
+        setIsAuthenticated(true);
         navigate("/profile");
         return;
       }
@@ -34,11 +36,12 @@ const AuthProvider = ({ children }) => {
     setUser(null);
     setToken("");
     localStorage.removeItem("token");
+    setIsAuthenticated(false);
     navigate("/");
   };
 
 
-  return <AuthContext.Provider value={{ token, user, loginAction, logOut }}>{children}</AuthContext.Provider>
+  return <AuthContext.Provider value={{ token, user, loginAction, logOut, isAuthenticated }}>{children}</AuthContext.Provider>
 };
 
 
