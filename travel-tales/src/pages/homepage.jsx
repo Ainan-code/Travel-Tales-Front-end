@@ -42,6 +42,8 @@ function Homepage() {
             <div className="diary-content">
                 <h5>{item.title}</h5>
                 <p>{item.content}</p>
+                <p>{item.location}</p>
+                <p>{item.author}</p>
                 <Link to={`diary-detail/${item._id}`}>
   Read more
 </Link>

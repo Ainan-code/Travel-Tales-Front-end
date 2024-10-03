@@ -10,6 +10,8 @@ const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated]= useState(false);
 
+  
+
   const loginAction = async (loginpayload) => {
     try {
       const response = await axios.post('http://localhost:5000/users/login', loginpayload);

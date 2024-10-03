@@ -8,6 +8,7 @@
         title: '',
         content: '',
         location: '',
+        author: '',
       });
 
       const token = localStorage.getItem('token');
@@ -50,6 +51,8 @@
           
             <label htmlFor="location">Location:</label>
             <input type="text" name='location'onChange={handleInput} value={blog.location}/>
+            <label htmlFor="author">Author:</label>
+            <input type="text" name='author'onChange={handleInput} value={blog.author}/>
             <button type="submit">Publish</button>
         </form>
 
