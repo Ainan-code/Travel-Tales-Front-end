@@ -5,6 +5,7 @@ import Login from './pages/login.jsx';
 import Homepage from './pages/homepage.jsx';
 import UserProfile from './pages/UserProfile.jsx';
 import DiaryEntry from './pages/DiaryEntry.jsx';
+import FullDiary from './pages/Diary-details.jsx';
 
 
 import { Routes, Route } from 'react-router-dom';
@@ -23,6 +24,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<UserProfile />} />
             <Route path="/diary" element={<DiaryEntry />} />
+            <Route path="/diary-detail/:id" element={<FullDiary />} />
       </Routes>
       </AuthProvider>
     </>

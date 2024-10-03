@@ -1,7 +1,7 @@
 
 
 import "../components/styles/Profile.css";
-import axios from "axios";
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "../components/MainLayout";
@@ -21,7 +21,7 @@ function UserProfile() {
 
    
  
- const token = localStorage.getItem('token');
+ const token = auth.token;
 
  useEffect(() => {
   fetch(`http://localhost:5000/users/profile`, { 
@@ -58,9 +58,9 @@ function UserProfile() {
         </div>
         <div className="user-post">
             <h4>Create a Post</h4>
-         <Link to="/creatediary">Make an Entry</Link>
+         <Link to="/diary">Make an Entry</Link>
         </div>
-        <button onClick={auth.logOut}>Logout</button>
+        
    </div>
    </MainLayout>
        

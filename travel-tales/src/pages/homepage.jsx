@@ -3,9 +3,12 @@ import Header from "../components/Header";
 
 import Banner from '../components/welcomeBanner';
 import '../components/styles/homepage.css';
-import Diary from "../components/diary";
+
 import Footer from "../components/footer";
 import { useEffect } from "react"; 
+import image1 from '../assets/oxana-v-qoAIlAmLJBU-unsplash.jpg';
+import '../components/styles/diary.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -32,7 +35,18 @@ function Homepage() {
             { 
            diaries &&  diaries.map((item) => {
              // Add a return
-            return <Diary title = {item.title} content = {item.content} user = {item.user}/>
+            return  <div className="diary-container" key={item._id} >
+            <div >
+                <img  className="diary-image" src={image1} alt="diary-image" />
+            </div>
+            <div className="diary-content">
+                <h5>{item.title}</h5>
+                <p>{item.content}</p>
+                <Link to={`diary-detail/${item._id}`}>
+  Read more
+</Link>
+            </div>
+        </div>
   })
 }
             

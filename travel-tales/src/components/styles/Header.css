@@ -14,6 +14,12 @@
     font-weight: 500;
   }
 
+.header h1 a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
   .header nav {
     display: flex;
     justify-content: space-between;
@@ -29,12 +35,13 @@
     display: inline;
   }
 
-  .header-links li a, button {
+  .header-links li a {
     color: #000;
     background-color: #829EC4;
     padding: 0.25em 0.5em;
     margin: 4px;
     text-decoration: none;
+    cursor: pointer;
     
   }
 

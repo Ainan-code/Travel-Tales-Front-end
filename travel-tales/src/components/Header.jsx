@@ -1,9 +1,5 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
-import login from "../pages/login";
-import register from "../pages/register";
 import './styles/Header.css';
 import AuthContext from "../AuthContext";
 import { useContext } from "react";
@@ -23,11 +19,11 @@ const Header = () => {
     { 
       auth.token ? (
         <>   
-          <h1>Travel Tales</h1>
+          <h1><a href="/">Travel Tales</a></h1>
     <nav>
         <ul className="header-links">
             <li><a href="/profile">Profile</a></li>
-            <li><button onClick={auth.logOut}>Logout</button></li>
+            <li><a onClick={auth.logOut}>Logout</a></li>
            
         </ul>
     </nav>
@@ -37,7 +33,7 @@ const Header = () => {
 
       ) : (
         <>  
-        <h1>Travel Tales</h1>
+       <h1><a href="/">Travel Tales</a></h1>
         <nav>
             <ul className="header-links">
                 <li><a href="/login">Login</a></li>
