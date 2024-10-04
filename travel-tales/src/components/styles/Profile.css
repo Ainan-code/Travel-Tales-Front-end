@@ -12,7 +12,7 @@
    
     padding: 15px;
     width: 350px;
-    background: #4C191B;
+    background: #DFE6DB;
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
@@ -27,45 +27,20 @@
 .profile-name {
     font-size: 20px;
     margin: 25px 0 0 120px;
-    color: white;
+    color: #3A4832;
     text-align: center;
     font-style: italic;
 }
 
-.about {
-    margin-top: 30px;
-    line-height: 1.6;
-}
 
-.btn {
-    margin: 30px 15px;
-    background: #7ce3ff;
-    padding: 10px 25px;
-    border-radius: 3px;
-    border: 1px solid #7ce3ff;
-    font-weight: bold;
-    font-family: Montserrat;
-    cursor: pointer;
-    color: #222;
-    transition: 0.2s;
-}
 
-.btn:last-of-type {
-    background: transparent;
-    border-color: #7ce3ff;
-    color: #7ce3ff;
-}
 
-.btn:hover {
-    background: #7ce3ff;
-    color: #222;
-}
 
 .user-post {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #4C191B;
+    background-color: #DFE6DB;
     padding: 15px;
     width: 350px;
    
@@ -80,11 +55,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #3A4832;
 }
 
 
 .user-post a {
-    color: white;
+    color: #3A4832;
 }
 

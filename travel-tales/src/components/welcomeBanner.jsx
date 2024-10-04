@@ -1,5 +1,6 @@
 import './styles/Banner.css';
-import image1 from '../assets/oxana-v-qoAIlAmLJBU-unsplash.jpg'
+import image1 from '../assets/marten-bjork-wGu1pzDSm3g-unsplash.jpg';
+
 
 
 function Banner() {

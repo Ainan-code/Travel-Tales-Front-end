@@ -6,9 +6,10 @@ import '../components/styles/homepage.css';
 
 import Footer from "../components/footer";
 import { useEffect } from "react"; 
-import image1 from '../assets/oxana-v-qoAIlAmLJBU-unsplash.jpg';
+import image1 from '../assets/Untitled design.png';
 import '../components/styles/diary.css';
 import { Link } from 'react-router-dom';
+import MainLayout from "../components/MainLayout";
 
 
 
@@ -28,8 +29,8 @@ function Homepage() {
 
     return (
         <>
-            
-            <Header/>
+            <MainLayout>
+           
             <Banner/>
             <h3 className="blogsection-title">Trending</h3>
             { 
@@ -41,9 +42,9 @@ function Homepage() {
             </div>
             <div className="diary-content">
                 <h5>{item.title}</h5>
-                <p>{item.content}</p>
+                <p>{item.content.substring(0, 250)}</p>
                 <p>{item.location}</p>
-                <p>{item.author}</p>
+                <p>by {item.author}</p>
                 <Link to={`diary-detail/${item._id}`}>
   Read more
 </Link>
@@ -52,7 +53,7 @@ function Homepage() {
   })
 }
             
-            <Footer/>
+</MainLayout>
             
 </>
        
