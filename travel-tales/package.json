@@ -3,6 +3,7 @@
   "name": "travel-tales",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://github.com/Ainan-code/Travel-Tales-Front-end/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
