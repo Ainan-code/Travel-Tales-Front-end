@@ -21,7 +21,7 @@ function Homepage() {
    
       
           useEffect(( )=> {
-            fetch('http://localhost:5000/diaries/alldiaries')
+            fetch('https://traveltales-backend.onrender.com/diaries/alldiaries')
             .then(response => response.json())
             .then(data => setdiaries(data))
             .catch(error => console.error(error));

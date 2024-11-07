@@ -36,7 +36,7 @@ function Register() {
         e.preventDefault();
       
         try {
-          const response = await axios.post('http://localhost:5000/users/register', userRegister);
+          const response = await axios.post('https://traveltales-backend.onrender.com/users/register', userRegister);
           console.log('Form data submitted successfully:', response.data);
           // You can add additional logic here, such as displaying a success message
           localStorage.setItem("token", response.data.token);

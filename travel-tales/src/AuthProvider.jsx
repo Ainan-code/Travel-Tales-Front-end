@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
 
   const loginAction = async (loginpayload) => {
     try {
-      const response = await axios.post('http://localhost:5000/users/login', loginpayload);
+      const response = await axios.post('https://traveltales-backend.onrender.com/users/login', loginpayload);
       console.log('Form data submitted successfully:', response.data);
       // You can add additional logic here, such as displaying a success message
         setUser(response.data.id);

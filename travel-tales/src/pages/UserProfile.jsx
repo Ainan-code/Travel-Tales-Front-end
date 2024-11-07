@@ -24,7 +24,7 @@ function UserProfile() {
  const token = auth.token;
 
  useEffect(() => {
-  fetch(`http://localhost:5000/users/profile`, { 
+  fetch(`https://traveltales-backend.onrender.com/users/profile`, { 
     method: "GET",
     headers: {
       "Authorization": `Bearer ${token}`, 
