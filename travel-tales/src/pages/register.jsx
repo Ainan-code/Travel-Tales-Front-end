@@ -3,9 +3,22 @@ import '../components/styles/register.css';
 import { useState } from 'react';
 import axios from 'axios';
 import MainLayout from '../components/MainLayout';
+import { useNavigate } from 'react-router-dom';
+
+import AuthContext from "../AuthContext";
+import { useContext } from "react";
 
 
 function Register() {
+
+
+  const UseAuth = () => {
+    return useContext(AuthContext);
+  };
+  const auth = UseAuth();
+ 
+  const navigate = useNavigate();
+
     const [userRegister, setUserRegister] = useState({
         username: '',
         password: '',
@@ -26,7 +39,11 @@ function Register() {
           const response = await axios.post('http://localhost:5000/users/register', userRegister);
           console.log('Form data submitted successfully:', response.data);
           // You can add additional logic here, such as displaying a success message
-          alert("succesfuly registered");
+          localStorage.setItem("token", response.data.token);
+          auth.setToken(response.data.token)
+          
+        
+          navigate('/');
         } catch (error) {
           console.error('Error submitting form data:', error);
           // You can add error handling logic here, such as displaying an error message
