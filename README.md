@@ -18,20 +18,21 @@ Backend: Node.js, Express.js, MongoDB
 Authentication: JWT (JSON Web Tokens)
 State Management: React ContextAPi
 Deployment: https://travel-tales-3c8.netlify.app/
+
 Setup Instructions
 
 1. Clone the Repository
-bash
+
 git clone https://github.com/ainan-code/travel-tales.git
 
 2. Install Dependencies
-bash
+
 npm install
 
 4. Configure Environment Variables
 In the server directory, create a .env file and add the following environment variables:
 
-plaintext
+
 MONGO_URI=your_mongo_connection_string
 PORT=your_preferred_backend_port
 JWT_SECRET=your_jwt_secret_key
@@ -41,7 +42,6 @@ Run both the backend and frontend servers in separate terminal windows:
 
 Start Command:
 
-bash
-Copy code
-cd server
+
+
 npm start
